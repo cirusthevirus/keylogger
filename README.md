@@ -5,6 +5,10 @@ This keylogger is written as a proof of concept and SHOULD NOT be used for illeg
 ## Description
 Keylogger running in the background to log keystrokes and mouse button clicks. It makes use of the PyObjC bridge. Of course, this makes the footprint of the keylogger much bigger than if written in plain objective-c. However, I dislike objective-c.
 
+## "Compiling"
+Simply run `python3 setup.py py2app -A` in the terminal while in the directory with all files.
+
+
 ## Issues
 For some reason, the CGEventTap does not tap regular keyboard button presses. It only taps special key presses and releases (from kCGEventFlagsChanged) and left mouse button clicks (from kCGEventLeftMouseDown).
 
